@@ -44,14 +44,14 @@ public class Assetbundletest : MonoBehaviour {
              * TODO : 对 testbyte 内容进行解密， 然后对解密的数据执行 LoadFromMemory 方法创建 AssetBundle 
              */
             // 解密过程 
-            int offset = sizeof(int) + sizeof(int);
-            byte[] testNew = new byte[testbyte.Length - offset];
-            for(int i = offset, j = 0; i < testbyte.Length; i++, j++)
-            {
-                testNew[j] = testbyte[i];
-            }
+            byte[] result = EnAndDecode.EncodeAndDecode.Decode(testbyte);
 
-            AssetBundle ab = AssetBundle.LoadFromMemory(testNew);
+            Debug.Log("解密前数据长度");
+            Debug.Log(testbyte.Length);
+            Debug.Log("解密后数据长度");
+            Debug.Log(result.Length);
+
+            AssetBundle ab = AssetBundle.LoadFromMemory(result);
 
             if(ab != null)
             {
