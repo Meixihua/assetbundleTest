@@ -1,0 +1,25 @@
+# Files
+*.o
+*.suo
+*.sln
+*.csproj
+*.apk
+*.log
+.DS_Store
+*.userprefs
+*.vscode
+*.zip
+
+# Folders
+LoadObject/Assets/StreamingAssets
+LoadObject/Assets/Resources/.vscode
+LoadObject/Library
+LoadObject/Temp
+LoadObject/Logs
+LoadObject/UnityPackageManager
+LoadObject/.vs
+product/build/.vscode
+product/build/__pycache__
+tool
+LoadObject_server
+LoadObject/obj/
